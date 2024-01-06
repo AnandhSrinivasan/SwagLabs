@@ -1,5 +1,7 @@
 package com.StepDef_cucu;
 
+import java.util.concurrent.TimeUnit;
+
 import org.apache.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 import org.openqa.selenium.WebDriver;
@@ -29,6 +31,10 @@ public class common_StepDef {
 			if (DriverManager.getDriver()==null) {
 				LOGGER.info("Driver is OKAY and Instantiating it!");
 				DriverManager.launchBrowser();
+				DriverManager.getDriver().manage().window().maximize();
+				DriverManager.getDriver().manage().deleteAllCookies();
+				DriverManager.getDriver().manage().timeouts().implicitlyWait(3000, TimeUnit.SECONDS);
+				utilsCommon.initWebElements();
 			}
 
 		} catch (Exception e) {
