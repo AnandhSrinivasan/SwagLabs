@@ -31,8 +31,8 @@ public class UtilsCommon {
 	}
 
 	public void initWebElements() {
-		PageFactory.initElements(DriverManager.getDriver(), LoginPage.class);
-		PageFactory.initElements(DriverManager.getDriver(), Homepage.class);
+		PageFactory.initElements(DriverManager.getDriver(), LoginPage.getInstance());
+		PageFactory.initElements(DriverManager.getDriver(), Homepage.getInstance());
 	}		
 
 }

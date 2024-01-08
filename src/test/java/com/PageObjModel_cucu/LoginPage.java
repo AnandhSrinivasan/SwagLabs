@@ -5,16 +5,40 @@ import org.openqa.selenium.support.FindBy;
 
 public class LoginPage {
 
+	private static LoginPage loginInstance;
+	private LoginPage() {	
+	}
+	public static LoginPage getInstance() {
+		if (loginInstance==null) {
+			loginInstance = new LoginPage();
+		}
+		return loginInstance;
+	}
+	
+	
 	@FindBy(xpath = "(//input[@id='user-name'])[1]")
-	public static WebElement UN;
+	private WebElement UN;
 	
 	@FindBy(xpath = "(//input[@id='password'])[1]")
-	public static WebElement PWD;
+	private WebElement PWD;
 	
 	@FindBy(xpath = "(//input[@id='login-button'])[1]")
-	public static WebElement LoginBut;
+	private WebElement LoginBut;
 	
 	@FindBy(xpath = "//h3[@data-test='error']")
-	public static WebElement errorLogin;
-	////*[text()='Epic sadface: Username and password do not match any user in this service']
+	private WebElement errorLogin;
+	
+	//Getter and Setter Method
+	public WebElement getUN() {
+		return UN;
+	}
+	public WebElement getPWD() {
+		return PWD;
+	}
+	public WebElement getLoginBut() {
+		return LoginBut;
+	}
+	public WebElement geterrorLogin() {
+		return errorLogin;
+	}
 }
