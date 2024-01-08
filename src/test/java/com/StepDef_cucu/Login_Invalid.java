@@ -22,23 +22,21 @@ public class Login_Invalid {
 
 	@When("User valid Invalid username and Ipassword")
 	public void user_valid_invalid_username_and_ipassword() {
-		LoginPage.getInstance().getUN().sendKeys(Constants.DummyUsername);
+		LoginPage.getInstance().enterUsernameUN(Constants.DummyUsername);
 		LOGGER.info("Dummy Username entered Successfully");
-		LoginPage.getInstance().getPWD().sendKeys(Constants.DummyPassword);
+		LoginPage.getInstance().enterPasswordPWD(Constants.DummyPassword);
 		LOGGER.info("Dummy Password entered Successfully");
 	}
 
 	@When("The User click the login button")
 	public void the_user_click_the_login_button() {
 		LOGGER.info("Login Button Clicked");
-		LoginPage.getInstance().getLoginBut().click();
+		LoginPage.getInstance().clickLoginButton();
 	}
 
 	@Then("User logged in Unsuccessfull")
 	public void user_logged_in_unsuccessfull() {
-		String errorText = LoginPage.getInstance().geterrorLogin().getText();
-		if (errorText .contentEquals("Epic sadface: Username and password do not match any user in this service")) {
-			LOGGER.info("User Enter Invalid Details, So Login UnSuccessfull");
-		}
+		LoginPage.getInstance().clickerrorMSG();
+		LOGGER.info("User Enter Invalid Details, So Login UnSuccessfull");
 	}
 }

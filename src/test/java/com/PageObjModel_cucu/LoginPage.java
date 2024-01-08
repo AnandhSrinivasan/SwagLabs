@@ -3,6 +3,8 @@ package com.PageObjModel_cucu;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import com.Constants_cucu.Constants;
+
 public class LoginPage {
 
 	private static LoginPage loginInstance;
@@ -28,17 +30,32 @@ public class LoginPage {
 	@FindBy(xpath = "//h3[@data-test='error']")
 	private WebElement errorLogin;
 	
-	//Getter and Setter Method
-	public WebElement getUN() {
-		return UN;
+	//By POM Framework 
+	
+	public void  enterUsernameUN(String userName) {
+		UN.sendKeys(userName);
 	}
-	public WebElement getPWD() {
-		return PWD;
+	public void enterPasswordPWD(String passWord) {
+		PWD.sendKeys(passWord);
 	}
-	public WebElement getLoginBut() {
-		return LoginBut;
+	public void clickLoginButton() {
+		LoginBut.click();
 	}
-	public WebElement geterrorLogin() {
-		return errorLogin;
+	public void clickerrorMSG() {
+		errorLogin.click();
 	}
+	
+// Using By Getter and Setter Method
+//	public WebElement getUN() {
+//		return UN;
+//	}
+//	public WebElement getPWD() {
+//		return PWD;
+//	}
+//	public WebElement getLoginBut() {
+//		return LoginBut;
+//	}
+//	public WebElement geterrorLogin() {
+//		return errorLogin;
+//	}
 }

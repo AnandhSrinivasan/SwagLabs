@@ -24,16 +24,16 @@ public class Login_Valid {
 	@When("User valid username and password")
 	public void user_valid_username_and_password() {
 		
-		LoginPage.getInstance().getUN().sendKeys(Constants.UserName);
+		LoginPage.getInstance().enterUsernameUN(Constants.UserName);
 		LOGGER.info("Username entered Successfully");
-		LoginPage.getInstance().getPWD().sendKeys(Constants.Password);
+		LoginPage.getInstance().enterPasswordPWD(Constants.Password);
 		LOGGER.info("Password entered Successfully");
 	}
 
 	@When("User click the login button")
 	public void user_click_the_login_button() {
 		LOGGER.info("Login Button Clicked");
-		LoginPage.getInstance().getLoginBut().click();
+		LoginPage.getInstance().clickLoginButton();
 	}
 
 	@Then("User logged in successfully")
@@ -46,8 +46,7 @@ public class Login_Valid {
 
 	@Given("I am on the Swag Labs login page")
 	public void i_am_on_the_swag_labs_login_page() {
-		String productverify =	Homepage.getInstance().getProductPage().getText();
-		productverify.equalsIgnoreCase("Product");
+		Homepage.getInstance().clickHomepage();
 		LOGGER.info("Homepage is verfied");
 	}
 

@@ -14,11 +14,18 @@ public class Homepage {
 		}
 		return HomepageInstance;
 	}
+	
 	@FindBy(xpath = "(//span[@class='title'])[1]")
 	private WebElement ProductPage;
 	
-	//Getter and Setter Method
-	public  WebElement getProductPage() {
-		return ProductPage;
+	public void clickHomepage() {
+		ProductPage.getText().contentEquals("Product");
 	}
+
+//Using Getter and Setter Method
+//	public  WebElement getProductPage() {
+//		return ProductPage;
+//	}
+	
+	
 }

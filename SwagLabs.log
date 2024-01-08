@@ -7,3 +7,12 @@
 2024-01-08 15:32:38,115 [INFO ] com.StepDef_cucu.common_StepDef [main] Instantiation the UtilsCommon
 2024-01-08 15:32:38,116 [INFO ] com.StepDef_cucu.common_StepDef [main] Loading the property file
 2024-01-08 15:32:38,118 [INFO ] com.StepDef_cucu.common_StepDef [main] Checking Driver is OKAY or NOT?
+2024-01-08 16:19:07,443 [INFO ] com.StepDef_cucu.common_StepDef [main] Execution is Started
+2024-01-08 16:19:07,452 [INFO ] com.StepDef_cucu.common_StepDef [main] Instantiation the UtilsCommon
+2024-01-08 16:19:07,455 [INFO ] com.StepDef_cucu.common_StepDef [main] Loading the property file
+2024-01-08 16:19:07,468 [INFO ] com.StepDef_cucu.common_StepDef [main] Checking Driver is OKAY or NOT?
+2024-01-08 16:19:07,501 [INFO ] com.StepDef_cucu.common_StepDef [main] Driver is OKAY and Instantiating it!
+2024-01-08 16:19:22,336 [INFO ] com.StepDef_cucu.common_StepDef [main] Execution is Started
+2024-01-08 16:19:22,336 [INFO ] com.StepDef_cucu.common_StepDef [main] Instantiation the UtilsCommon
+2024-01-08 16:19:22,338 [INFO ] com.StepDef_cucu.common_StepDef [main] Loading the property file
+2024-01-08 16:19:22,340 [INFO ] com.StepDef_cucu.common_StepDef [main] Checking Driver is OKAY or NOT?
